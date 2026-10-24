@@ -1,0 +1,8 @@
+Portions of the optional Omarchy Shell plugins are derived from Omarchy:
+https://github.com/omacom/omarchy
+
+Omarchy is distributed under the MIT License.
+Copyright (c) David Heinemeier Hansson
+
+The derived plugin code remains subject to the MIT License included in this
+repository.

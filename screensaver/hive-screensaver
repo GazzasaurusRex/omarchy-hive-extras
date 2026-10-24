@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+
+if ! python3 -c 'import cairo, ctypes.util, gi; gi.require_version("Gtk", "4.0"); from gi.repository import Gtk; assert ctypes.util.find_library("GL")' 2>/dev/null; then
+  cat >&2 <<'EOF'
+The Hive screensaver requires Python 3, GTK 4, PyGObject, pycairo, and OpenGL.
+On Omarchy these are normally provided by: python, gtk4, python-gobject,
+python-cairo, and libglvnd. Re-run ./install.sh after installing them.
+EOF
+  exit 1
+fi
+
+exec python3 "$dir/renderer-gl.py" --app-id org.omarchy.screensaver "$@"

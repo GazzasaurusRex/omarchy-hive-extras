@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "hive.idle",
+  "name": "Hive Idle",
+  "version": "1.0.0",
+  "author": "GazzasaurusRex, derived from Omarchy",
+  "description": "Omarchy idle service with a theme-aware Hive screensaver dispatcher.",
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "omarchy": {"clonedFrom": "omarchy.idle"},
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}

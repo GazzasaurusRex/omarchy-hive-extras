@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+state_home=${XDG_STATE_HOME:-"$HOME/.local/state"}
+theme=$(cat "$state_home/omarchy/current/theme.name" 2>/dev/null || true)
+if [[ $theme == "hive" ]]; then
+  dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+  exec "$dir/launch"
+fi
+
+exec omarchy-launch-screensaver

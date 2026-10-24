@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.bak.*
+*.swp
+*~
+.env
+.env.*
+.DS_Store
+test-output/

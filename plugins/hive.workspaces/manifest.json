@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "hive.workspaces",
+  "name": "Hive Sectors",
+  "version": "1.0.0",
+  "author": "GazzasaurusRex, derived from Omarchy",
+  "description": "Compact two-digit Hive sector workspace indicators",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "Workspaces.qml"},
+  "barWidget": {
+    "displayName": "Hive Sectors",
+    "description": "Two-digit facility sector indicators",
+    "category": "Compositor",
+    "allowMultiple": false
+  },
+  "omarchy": {"clonedFrom": "omarchy.workspaces"}
+}

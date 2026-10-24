@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hive.lock",
+  "name": "Hive Security Lock",
+  "version": "1.0.0",
+  "author": "GazzasaurusRex, derived from Omarchy",
+  "description": "Visual-only Hive presentation of Omarchy's verified stock session lock.",
+  "omarchy": {
+    "clonedFrom": "omarchy.lock",
+    "capabilities": [
+      "authentication"
+    ]
+  },
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}

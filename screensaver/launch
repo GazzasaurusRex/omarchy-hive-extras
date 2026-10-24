@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+# Keep the app id in both Wayland metadata and the process command line so
+# Omarchy's existing idle watcher and lock-time cleanup continue to work.
+pgrep -f '[o]rg.omarchy.screensaver' >/dev/null && exit 0
+
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+exec "$dir/hive-screensaver" \
+  --app-id org.omarchy.screensaver
